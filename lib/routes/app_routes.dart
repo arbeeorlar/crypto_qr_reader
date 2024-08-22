@@ -4,5 +4,6 @@ part of 'app_pages.dart';
  * */
 
 abstract class Routes {
-  static const splashScreen = '/SplashScreen'; // app page
+  static const splashScreen = '/SplashScreen';
+  static const landingScreen = '/LandingScreen';// app page
 }

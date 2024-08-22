@@ -18,7 +18,7 @@ class AppStyles {
   static TextStyle bottomNavigationText(
       {Color? color, double? size, FontWeight? fontWeight}) {
     return TextStyle(
-        color: color, fontWeight: fontWeight, fontSize: size, fontFamily: "SharpGrotesk");
+        color: color, fontWeight: fontWeight, fontSize: size);
   }
 
   static TextStyle dashBoardText(
@@ -46,17 +46,7 @@ class AppStyles {
         ); //fontFamily: "gilroy"
   }
 
-  // static TextStyle headerText(
-  //     {Color? color,
-  //     double? size,
-  //     FontWeight? fontWeight,
-  //     double letterSpacing = 0}) {
-  //   return GoogleFonts.pacifico(
-  //       color: color,
-  //       fontWeight: fontWeight,
-  //       fontSize: size,
-  //       letterSpacing: letterSpacing);
-  // }
+
 
   static TextStyle appBarText(
       {Color? color, double size = 18.0, double letterSpacing = 0}) {
@@ -64,8 +54,7 @@ class AppStyles {
         color: color,
         fontWeight: FontWeight.w600,
         fontSize: size,
-        letterSpacing: letterSpacing,
-        fontFamily: "SharpGrotesk"); //fontFamily: "gilroy"
+        letterSpacing: letterSpacing,); //fontFamily: "gilroy"
   }
 
   static ButtonStyle flatButtonStyle = TextButton.styleFrom(
@@ -82,8 +71,7 @@ class AppStyles {
     return TextStyle(
         color: primaryColor,
         fontWeight: fontWeight,
-        fontSize: size,
-        fontFamily: "SharpGrotesk");
+        fontSize: size,);
   }
 
   static TextStyle bodyText(
@@ -92,7 +80,7 @@ class AppStyles {
       double letterSpacing = 0,
       FontWeight? fontWeight}) {
     return TextStyle(
-        color: color, fontWeight: fontWeight,fontSize: size,fontFamily: "SharpGrotesk");
+        color: color, fontWeight: fontWeight,fontSize: size);
   }
 
 
@@ -102,7 +90,7 @@ class AppStyles {
         double letterSpacing = 0,
         FontWeight? fontWeight}) {
     return TextStyle(
-        color: color, fontWeight: fontWeight, fontSize: size,fontFamily: "SharpGrotesk",decoration: TextDecoration.underline);
+        color: color, fontWeight: fontWeight, fontSize: size,decoration: TextDecoration.underline);
   }
 
   static BoxDecoration inputField({bool hasError = false}) {

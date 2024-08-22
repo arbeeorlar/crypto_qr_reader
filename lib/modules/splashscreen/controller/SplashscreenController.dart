@@ -43,11 +43,11 @@ class SplashscreenController extends GetxController  with GetTickerProviderState
 
 
     Future<Timer> loadData() async {
-    return Timer(const Duration(milliseconds: 60000), onDoneLoading);
+    return Timer(const Duration(milliseconds: 5000), onDoneLoading);
   }
 
   onDoneLoading() async {
-    //Get.offAndToNamed(Routes.walkthroughScreen);
+    Get.offAndToNamed(Routes.landingScreen);
   }
 
   @override

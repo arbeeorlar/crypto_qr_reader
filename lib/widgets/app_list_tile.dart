@@ -1,7 +1,6 @@
-import 'package:auto_size_text/auto_size_text.dart';
-import 'package:fbnmobie/res/app_colors.dart';
+
 import 'package:flutter/material.dart';
-import 'package:fbnmobie/util/responsive_screen_functions.dart';
+import '../theme/app_colors.dart';
 
 class AppListTile extends StatelessWidget {
   final String valueText;
@@ -12,13 +11,11 @@ class AppListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Function sh = sHeight(context);
-    final Function sw = sWidth(context);
 
     return Container(
-      height: sh(50),
-      padding: EdgeInsets.symmetric(horizontal: sw(32)),
-      decoration: BoxDecoration(color: isGray ? gray8 : white),
+      height: 50,
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      decoration: BoxDecoration(color: isGray ? gray20 : white),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -26,16 +23,16 @@ class AppListTile extends StatelessWidget {
             flex: 1,
             child: Text(
               keyText,
-              style: Theme.of(context).textTheme.overline!.copyWith(
-                    fontSize: sh(12),
+              style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                    fontSize: 12,
                   ),
             ),
           ),
           Expanded(
               flex: 1,
-              child: AutoSizeText(valueText,
-                  style: Theme.of(context).textTheme.overline!.merge(TextStyle(
-                      fontSize: sh(14), fontWeight: FontWeight.w400)))),
+              child: Text(valueText,
+                  style: Theme.of(context).textTheme.headlineSmall!.merge(const TextStyle(
+                      fontSize: 14, fontWeight: FontWeight.w400)))),
         ],
       ),
     );
